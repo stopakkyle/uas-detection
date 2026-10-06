@@ -1,0 +1,25 @@
+FINAL TEST-SPLIT RESULTS
+==============================================================
+weights        : /Users/kylestopak/Desktop/Drone Detection Tool/runs/uav_yolo26n/weights/best.pt
+split          : test (2,200 images, never used in training or tuning)
+image size     : 640
+
+mAP50          : 0.9294
+mAP50-95       : 0.5964
+precision      : 0.9473
+recall         : 0.8811
+
+CONTEXT
+--------------------------------------------------------------
+published best : 0.683 mAP (Cascade-RCNN + ResNet50, DUT Table II)
+                 NOTE: the paper does not state which IoU threshold its
+                 'mAP' uses. Compare against BOTH of ours and say so.
+
+trivial floor  : 0.0000 AP50 for all three trivial predictors
+                 (predict nothing / median train box / random box)
+
+CAVEAT         : 64.8% of test images have a near-duplicate in train
+                 (perceptual-hash audit). DUT's official split is
+                 frame-level over video clips, so this figure is
+                 optimistic as a measure of generalisation to new scenes.
+                 The same caveat applies to every published DUT number.

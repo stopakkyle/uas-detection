@@ -1,0 +1,27 @@
+RUN RECORD -- copy these facts into your methods section
+Values read from this run's args.yaml, i.e. what ACTUALLY ran.
+==============================================================
+model                : /Users/kylestopak/Desktop/Drone Detection Tool/runs/uav_yolo26n/weights/last.pt
+epochs               : 25
+image size           : 640
+batch size           : 8
+dataloader workers   : 0
+device               : mps
+early-stop patience  : 15
+seed                 : 0
+deterministic        : true
+optimizer            : auto
+initial LR (lr0)     : 0.01
+dataset yaml         : /Users/kylestopak/Desktop/Drone Detection Tool/dataset_yolo/data.yaml
+
+ultralytics version  : 8.4.145
+torch version        : 2.14.0
+python version       : 3.14.3
+machine              : macOS-26.5.1-arm64-arm-64bit-Mach-O
+
+SPLIT: the official DUT Anti-UAV train/val/test split, used as published.
+       This is a FRAME-LEVEL split of video clips, not a group/clip-level
+       split -- see the evaluation-hygiene note in the project writeup.
+
+NOTE: on Apple Silicon (MPS) Ultralytics forces workers=0 regardless of
+      what the script requests, so quote the value above, not the script.
